@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Documentation</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="mt-5">
+  <div class="container-fluid">
+    <div class="jumbotron">
+      <div class="text-right">
+        <a class="btn btn-primary" href="/success" role="button">Profile View</a>
+        <a class="btn btn-danger" href="/" role="button">LogOut</a>
+      </div>
+      <h1 class="text-success  text-center"> PREMIER-API 2.0</h1> <br><br>
+      <div class="row">
+        <div class="col-12">
+          <div class="offset-2">
+            <h2># Jugadores</h2> <b>Permisos:</b> Nivel 1 y 2
+            <br> <br>
+            <h3 class="text-info">Consulta:</h3>
+            <br>
+            <div class="bg-light col-7 p-3">
+              <code class="text-dark">
+                    http://localhost:3000/success/api/v2/players/?position=<span class="text-danger">{position}</span>&age=<span class="text-danger">{age}</span>&apikey=<span class="text-danger">{apikey}</span>
+                 </code>
+            </div>
+            <br>
+            <h5>Parametros</h5>
+            <table class="table col-7">
+              <tr>
+                <td><code class="bg-light p-1">position</code></td>
+                <td>
+                  <p>Opcional</p>
+                </td>
+                <td>Hace referencia a la posición donde actúa un jugador en el campo. <br>
+                  Opciones válidas:
+                  <br><br>
+                  <code class="bg-light p-1">Goalkeeper</code>
+                  <code class="bg-light p-1">Defender</code>
+                  <code class="bg-light p-1">Midfielder</code>
+                  <code class="bg-light p-1">Forward</code>
+                </td>
+              </tr>
+              <tr>
+                <td><code class="bg-light p-1">age</code></td>
+                <td>
+                  <p>Opcional</p>
+                </td>
+                <td>Hace referencia a la edad del jugador. <br>
+                  Cualquier número puede ser una opción válida.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="bg-light p-1">apikey</code></td>
+                <td>
+                  <p>Requerida</p>
+                </td>
+                <td>Su clave API única (siempre puede encontrarla en la página de su cuenta)
+                </td>
+              </tr>
+            </table>
+            <br>
+            <h3 class="text-info">Ejemplo:</h3>
+            <br>
+            <div class="bg-light col-5 p-3">
+              <code class="text-dark">
+                    http://localhost:3000/success/api/v2/players/?position=<span class="text-danger">Defender</span>&age=<span class="text-danger">32</span> &apikey=<span class="text-danger">KIbXow/S1DcGz/D.cV0ChVYO0a2r0t5c</span>
+                 </code>
+            </div>
+            <br>
+            <pre class="bg-light col-5">
+                <code>
+    [
+    {
+      "id": 1,
+      "full_name": "Aaron Cresswell",
+      "age": 32,
+      "birthday": 629712000,
+      "birthday_GMT": "1989-12-14T23:00:00.000Z",
+      "league": "Premier League",
+      "season": "2018/2019",
+      "position": "Defender",
+      "Current_Club": "West Ham United",
+      "minutes_played_overall": 1589,
+      "minutes_played_home": 888,
+      "minutes_played_away": 701,
+      "nationality": "England",
+      "appearances_overall": 20,
+      "appearances_home": 11,
+      "appearances_away": 9,
+      "goals_overall": 0,
+      "goals_home": 0,
+      "goals_away": 0,
+      "assists_overall": 1,
+      "assists_home": 1,
+      "assists_away": 0,
+      "penalty_goals": 0,
+      "penalty_misses": 0,
+      "clean_sheets_overall": 3,
+      "clean_sheets_home": 2,
+      "clean_sheets_away": 1,
+      "conceded_overall": 22,
+      "conceded_home": 12,
+      "conceded_away": 10,
+      "yellow_cards_overall": 1,
+      "red_cards_overall": 0,
+      "goals_involved_per_90_overall": "0.06",
+      "assists_per_90_overall": "0.06",
+      "goals_per_90_overall": "0.00",
+      "goals_per_90_home": "0.00",
+      "goals_per_90_away": "0.00",
+      "min_per_goal_overall": 0,
+      "conceded_per_90_overall": "1.25",
+      "min_per_conceded_overall": 72,
+      "min_per_match": 79,
+      "min_per_card_overall": 1589,
+      "min_per_assist_overall": 1589,
+      "cards_per_90_overall": "0.06",
+      "rank_in_league_top_attackers": 290,
+      "rank_in_league_top_midfielders": 191,
+      "rank_in_league_top_defenders": 80,
+      "rank_in_club_top_scorer": 20
+    },
+    {
+      "id": 111,
+      "full_name": "Chris Smalling",
+      "age": 32,
+      "birthday": 627724800,
+      "birthday_GMT": "1989-11-21T23:00:00.000Z",
+      "league": "Premier League",
+      "season": "2018/2019",
+      "position": "Defender",
+      "Current_Club": "Manchester United",
+      "minutes_played_overall": 2128,
+      "minutes_played_home": 1138,
+      "minutes_played_away": 990,
+      "nationality": "England",
+      "appearances_overall": 24,
+      "appearances_home": 13,
+      "appearances_away": 11,
+      "goals_overall": 1,
+      "goals_home": 0,
+      "goals_away": 1,
+      "assists_overall": 0,
+      "assists_home": 0,
+      "assists_away": 0,
+      "penalty_goals": 0,
+      "penalty_misses": 0,
+      "clean_sheets_overall": 4,
+      "clean_sheets_home": 2,
+      "clean_sheets_away": 2,
+      "conceded_overall": 34,
+      "conceded_home": 16,
+      "conceded_away": 18,
+      "yellow_cards_overall": 1,
+      "red_cards_overall": 0,
+      "goals_involved_per_90_overall": "0.04",
+      "assists_per_90_overall": "0.00",
+      "goals_per_90_overall": "0.04",
+      "goals_per_90_home": "0.00",
+      "goals_per_90_away": "0.09",
+      "min_per_goal_overall": 2128,
+      "conceded_per_90_overall": "1.44",
+      "min_per_conceded_overall": 63,
+      "min_per_match": 89,
+      "min_per_card_overall": 2128,
+      "min_per_assist_overall": 0,
+      "cards_per_90_overall": "0.04",
+      "rank_in_league_top_attackers": 246,
+      "rank_in_league_top_midfielders": 294,
+      "rank_in_league_top_defenders": 106,
+      "rank_in_club_top_scorer": 15
+    }...
+    ]
+                </code>
+              </pre>
+            <br>
+            <h2># Minutos</h2> <b>Permisos:</b> Nivel 2
+            <br>
+            <br>
+            <h3 class="text-info">Consulta:</h3>
+            <br>
+            <div class="bg-light col-7 p-3">
+              <code class="text-dark">
+                    http://localhost:3000/success/api/v2/minutes/?order=<span class="text-danger">{order}</span>&played=<span class="text-danger">{played}</span>&apikey=<span class="text-danger">{apikey}</span>
+                 </code>
+            </div>
+            <br>
+            <h5>Parametros</h5>
+            <table class="table col-7">
+              <tr>
+                <td><code class="bg-light p-1">order</code></td>
+                <td>
+                  <p>Opcional</p>
+                </td>
+                <td>Hace referencia al orden con el que se devolverán los registros, valorando los minutos jugados de
+                  cada jugador. <br>
+                  Opciones válidas:
+                  <br><br>
+                  <code class="bg-light p-1">desc</code>
+                  <code class="bg-light p-1">asc</code>
+                </td>
+              </tr>
+              <tr>
+                <td><code class="bg-light p-1">played</code></td>
+                <td>
+                  <p>Opcional</p>
+                </td>
+                <td>Hace refencia al tipo de minutos que queremos obtener. <br>
+                  Opciones válidas:
+                  <br><br>
+                  <code class="bg-light p-1">home</code>
+                  <code class="bg-light p-1">away</code>
+                  <code class="bg-light p-1">overall</code>
+                </td>
+              </tr>
+              <tr>
+                <td><code class="bg-light p-1">apikey</code></td>
+                <td>
+                  <p>Requerida</p>
+                </td>
+                <td>Su clave API única (siempre puede encontrarla en la página de su cuenta)
+                </td>
+              </tr>
+            </table>
+            <br>
+            <h3 class="text-info">Ejemplo:</h3>
+            <br>
+            <div class="bg-light col-5 p-3">
+              <code class="text-dark">
+                http://localhost:3000/success/api/v2/minutes/?order=<span class="text-danger">desc</span>&played=<span class="text-danger">overall</span>&apikey=<span class="text-danger">KIbXow/S1DcGz/D.cV0ChVYO0a2r0t5c</span>
+             </code>
+            </div>
+            <br>
+            <pre class="bg-light col-5">
+                <code>
+   [
+   {
+      "full_name": "Alisson Becker",
+      "minutes_played_overall": 3420
+   },
+   {
+      "full_name": "Ben Foster",
+      "minutes_played_overall": 3420
+   },
+   {
+      "full_name": "Ben Mee",
+      "minutes_played_overall": 3420
+   },
+   {
+      "full_name": "Conor Coady",
+      "minutes_played_overall": 3420
+   },
+   {
+      "full_name": "David de Gea",
+      "minutes_played_overall": 3420
+   },
+   {
+      "full_name": "Ederson",
+      "minutes_played_overall": 3420
+   },
+   {
+      "full_name": "Jordan Pickford",
+      "minutes_played_overall": 3420
+   },
+   {
+      "full_name": "Kasper Schmeichel",
+      "minutes_played_overall": 3420
+   },
+   {
+      "full_name": "Luka MilivojeviÄ‡",
+      "minutes_played_overall": 3420
+   },...
+   ]
+                </code>
+              </pre>
+          </div>
+          <br>
+        </div>
+      </div>
+      <br>
+      <br>
+    </div>
+  </div>
+</body>
+
+</html>

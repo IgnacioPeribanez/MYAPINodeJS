@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "generate-api-key": "^1.0.2",
+    "mysql2": "^2.3.3",
+    "nanoid": "^3.3.4",
+    "passport": "^0.6.0",
+    "passport-google-oauth": "^2.0.0",
+    "url": "^0.11.0"
+  }
+}

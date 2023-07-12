@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Profile View</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="mt-5">
+  <div class="container-fluid">
+    <div class="jumbotron">
+      <div class="text-right">
+        <a class="btn btn-primary" href="/doc" role="button">API Doc</a>
+        <a class="btn btn-danger" href="/" role="button">LogOut</a>
+      </div>
+      <h1 class="text-primary text-center"><span class="fa fa-user"></span> Profile</h1> <br><br>
+      <div class="row">
+        <div class="col-12">
+          <div class="text-center">
+            <p><b>ID:</b> <%= user[0].id_Usuario%>
+            <form action="/getApiKey" method="post">
+              <p><b>API-KEY:</b> <%= user[0].api_key%>
+              <input type="submit" value="Cambiar"/> </p>
+            </form>
+            <form action="/getNivel" method="post">
+              <p><b> Nivel de usuario:</b> <%= user[0].nivel%>
+              <input type="submit" value="Cambiar" /> </p>
+            </form>
+          </div>
+          <br>
+        </div>
+      </div>
+      <br>
+      <br>
+    </div>
+  </div>
+</body>
+
+</html>
