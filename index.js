@@ -190,7 +190,7 @@ app.post("/getNivel", (req, res) => {
 // Gestionamos la funcion GET que se ejecutara al entrar en /success/api/v2/players
 app.get('/success/api/v2/players', (req, res) => {
   // Consulta de prueba:
-  // http://localhost:3000/success/api/v2/players/?position=Defender&age=32&apikey=KIbXow/S1DcGz/D.cV0ChVYO0a2r0t5c
+  // http://localhost:3000/success/api/v2/players/?position=Defender&age=32&apikey=APIKEY
   const position = req.query.position;
   const age = req.query.age;
   const apikey = req.query.apikey;
@@ -234,7 +234,7 @@ app.get('/success/api/v2/players', (req, res) => {
 
 // Gestionamos la funcion GET que se ejecutara al entrar en /success/api/v2/minutes
 app.get('/success/api/v2/minutes', (req, res) => {
-  // http://localhost:3000/success/api/v2/minutes/?order=desc&played=overall&apikey=KIbXow/S1DcGz/D.cV0ChVYO0a2r0t5c
+  // http://localhost:3000/success/api/v2/minutes/?order=desc&played=overall&apikey=APIKEY
   const order = req.query.order;
   const played = req.query.played;
   const apikey = req.query.apikey;
