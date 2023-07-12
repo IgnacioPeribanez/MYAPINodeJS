@@ -74,8 +74,8 @@ passport.deserializeUser(function (obj, cb) {
 });
 
 // Introducimos los atributos del cliente al que nos conectaremos
-const GOOGLE_CLIENT_ID = '247565121641-nju5sboc99b00537ku8lei55uh63i3ka.apps.googleusercontent.com';
-const GOOGLE_CLIENT_SECRET = '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';
+const GOOGLE_CLIENT_ID = 'CLIENTID';
+const GOOGLE_CLIENT_SECRET = 'SECRETCLIENTID';
 // Nos conectamos al cliente
 passport.use(new GoogleStrategy({
   clientID: GOOGLE_CLIENT_ID,
